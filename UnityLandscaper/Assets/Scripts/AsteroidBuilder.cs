@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Asteroid builder.
+/// </summary>
 public class AsteroidBuilder : BaseBuilder
 {
 
@@ -66,11 +69,11 @@ public class AsteroidBuilder : BaseBuilder
 		mMesh.Clear();
 
 		//keep going!
-		int i = 170;
-		float spike = 0.2f;
+		int i = 2000;
+		float spike = 0.3f;
 		while (i-- >= 0)
 		{
-			//spike *= 0.9995f;
+			spike = Random.Range(0.01f, 0.2f);
 			Utils.Divide(spike, mTriangleList, mPointList);
 		}
 
